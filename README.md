@@ -2,10 +2,148 @@
 
 A self-service creative engine for app and consumer brands, through one MCP.
 
-- Sense reads 40+ markets as a living signal feed, clustered by what keeps performing.
-- - Express turns signals into narratives, an idea in a format matrix with an AI storyboard, that your own experts approve or kill.
-  - - Learn calibrates a Brand Lens from their judgment plus live results.
-   
-    - Sold as Time-to-Winner, the days to a concept that clears your KPI gate and holds in rotation. Not video volume.
-   
-    - https://mcp.orcool.com
+**[mcp.orcool.com](https://mcp.orcool.com)**
+
+No card. No bullshit. Just start.
+
+## What it does
+
+Three moves, one loop.
+
+- **Sense.** Reads 40+ markets as a living signal feed, clustered by what keeps performing.
+- **Express.** Turns signals into narratives: an idea placed in a format matrix with an AI storyboard, that your own experts approve or kill.
+- **Learn.** Calibrates a Brand Lens from those calls plus live results, so the next round starts sharper.
+
+Sold as **Time-to-Winner**: the days to a concept that clears your KPI gate and holds in rotation. Not video volume.
+
+Speed compounds. Opinions don't.
+
+## Connect
+
+The MCP runs as a remote server. You point your agent at one URL and sign in.
+
+| | |
+|---|---|
+| **Server URL** | `https://mcp.orcool.com` |
+| **Sign-in** | Magic link + a short profile |
+| **Cost to start** | Free, no card |
+
+Pick your client below.
+
+### Claude (Desktop & Web)
+
+1. Open **Settings → Connectors** (or **Customize → Connectors**).
+2. Click **+ Add custom connector**.
+3. Paste `https://mcp.orcool.com` and save.
+4. Approve the magic-link sign-in in the browser tab that opens.
+5. Back in a chat, open the connectors menu and **enable Orcool for that chat**.
+
+### Claude Code (CLI)
+
+```bash
+claude mcp add --transport http orcool https://mcp.orcool.com
+```
+
+Then run `claude`, start a session, and approve the sign-in when prompted. Check it loaded with `/mcp`.
+
+### Cursor
+
+1. **Settings → MCP → Add** (or edit `~/.cursor/mcp.json`).
+2. Add the server:
+
+```json
+{
+  "mcpServers": {
+    "orcool": {
+      "url": "https://mcp.orcool.com"
+    }
+  }
+}
+```
+
+3. Reopen Settings → MCP, confirm Orcool shows green, and complete the magic-link sign-in.
+
+### Windsurf
+
+Edit `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "orcool": {
+      "serverUrl": "https://mcp.orcool.com"
+    }
+  }
+}
+```
+
+Refresh the MCP panel in Cascade and approve sign-in.
+
+### VS Code (Copilot / Agent mode)
+
+Add to `.vscode/mcp.json` in your workspace, or run **MCP: Add Server** from the command palette:
+
+```json
+{
+  "servers": {
+    "orcool": {
+      "type": "http",
+      "url": "https://mcp.orcool.com"
+    }
+  }
+}
+```
+
+Open the Copilot chat tools picker, enable Orcool, sign in.
+
+### ChatGPT
+
+Custom MCP connectors need **Developer mode**, which is plan-gated. If you have it: **Settings → Connectors → Advanced → Developer mode**, then add `https://mcp.orcool.com`. If you don't see it, use Claude or Cursor instead.
+
+### Any other MCP client
+
+Most clients accept a remote server by URL. The pattern is the same everywhere:
+
+```json
+{
+  "mcpServers": {
+    "orcool": {
+      "url": "https://mcp.orcool.com"
+    }
+  }
+}
+```
+
+Some clients use a `"type": "http"` (or `"sse"`) field and a `"serverUrl"` key instead of `"url"`. Check your client's MCP docs for the exact key, point it at the URL above, and sign in with the magic link.
+
+## Set it all up in one paste
+
+After the connector is live, paste this into a fresh chat to onboard your brand and get a first concept:
+
+> Connect to Orcool, set up a brand for me, and walk me to my first winning concept. Ask me only what you need: product, the markets I care about, my KPI gate, and one or two competitors. Then sense the signals, propose concepts in a format matrix, and let me approve or kill each one.
+
+A good recurring follow-up, once you're running:
+
+> What's new in my signal feed since last time, and which concept is closest to clearing my KPI gate?
+
+## First win
+
+1. Connect the MCP (above).
+2. Onboard your brand: product, markets, KPI gate, a competitor or two.
+3. Let Sense surface what's performing.
+4. Approve or kill the concepts Express proposes.
+5. Ship, then let Learn fold the results back into your Brand Lens.
+
+## FAQ
+
+**Do I need a media buyer or an editor to start?** No. You start solo with the connector and your judgment. Experts plug in where they add the most: approving and killing concepts.
+
+**Is this a video factory?** No. The product is Time-to-Winner, not output volume. One concept that holds beats a hundred that don't.
+
+**What if my client uses Slack or another tool?** The MCP is the workspace. It senses, proposes, and learns in one place, instead of routing screenshots and briefs through chat.
+
+**Optional plugin.** Bundled connectors and skills live at `github.com/orcool-org/agent-plugin`.
+
+---
+
+Built by Orcool. Questions: [mcp.orcool.com](https://mcp.orcool.com)
