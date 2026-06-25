@@ -8,13 +8,13 @@ No card. No bullshit. Just start.
 
 ## What it does
 
-Three moves, one loop.
+Three live feeds, one tool call.
 
-- **Sense.** Reads 40+ markets as a living signal feed, clustered by what keeps performing.
-- **Express.** Turns signals into narratives: an idea placed in a format matrix with an AI storyboard, that your own experts approve or kill.
-- **Learn.** Calibrates a Brand Lens from those calls plus live results, so the next round starts sharper.
+- **Alerts** -- the move, the morning it happens. A daily ping when a competitor ships new creative, not a week late.
+- **Patterns** -- the winning move, plus why. The pattern that is working, its format variants, and why it lands, structured so your agent can use it.
+- **Reports** -- the week in your category. What worked and why, ready to drop into a brief or a scoring step.
 
-Sold as **Time-to-Winner**: the days to a concept that clears your KPI gate and holds in rotation. Not video volume.
+Sold as **Time-to-Winner**: the days to an ad that clears your KPI gate and holds in rotation. Not video volume.
 
 Speed compounds. Opinions don't.
 
